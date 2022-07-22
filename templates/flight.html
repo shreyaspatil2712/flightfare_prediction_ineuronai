@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">FLIGHT FARE PREDICTION</div>
+    <div class="content">
+      <form action="\price_calc" method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Boarding Point</span>
+            <select name="Source" id="Source" required="required">
+                                <option value="1000">Delhi</option>
+                                <option value="0100">Kolkata</option>
+                                <option value="0010">Mumbai</option>
+                                <option value="0001">Chennai</option>
+                            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Destination </span>
+            <select name="Destination" id="Destination" required="required">
+                                <option value="10000">Cochin</option>
+                                <option value="01000">Delhi</option>
+                                <option value="00100">New Delhi</option>
+                                <option value="00010">Hyderabad</option>
+                                <option value="00001">Kolkata</option>
+                            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Departure Date</span>
+            <input type="datetime-local" name="Dep_Time" id="Dep_Time" required="required">
+          </div>
+          <div class="input-box">
+            <span class="details">Arrival Date</span>
+            <input type="datetime-local" name="Arrival_Time" id="Arrival_Time" required="required">
+          </div>
+          <div class="input-box">
+            <span class="details">Number of stops</span>
+            <input type="text" name = "stops" id = "stops" required="required">
+          </div>
+          <div class="input-box">
+            <span class="details">Airline</span>
+            <select name="airline" id="airline" required="required">
+                                <option value="10000000000">Jet Airways</option>
+                                <option value="01000000000">IndiGo</option>
+                                <option value="00100000000">Air India</option>
+                                <option value="00010000000">Multiple carriers</option>
+                                <option value="00001000000">SpiceJet</option>
+                                <option value="00000100000">Vistara</option>
+                                <option value="00000010000">GoAir</option>
+                                <option value="00000001000">Multiple carriers Premium economy </option>
+                                <option value="00000000100">Jet Airways Business</option>
+                                <option value="00000000010"> Vistara Premium economy </option>
+                                <option value="00000000001">Trujet </option>
+                            </select>
+          </div>
+        </div>
+                                                      <div>
+                                                        <a> Predicted Price</a>
+                                                        <a>  {{ price }} </a>
+                                                      </div>
+        <div class="button">
+          <input type="submit" value="Predict Price">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
