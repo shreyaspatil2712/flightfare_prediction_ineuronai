@@ -8,7 +8,7 @@ from flask import Flask, request, render_template
 pred2 = 0
 app = Flask(__name__)
 
-mdl = pickle.load(open("C:/Users/shrey/Downloads/Flight-Fare-Prediction-master/Flight-Fare-Prediction-master/fare_predict.pkl", "rb"))
+mdl = pickle.load(open("fare_predict.pkl", "rb"))
 
 
 @app.route("/")
