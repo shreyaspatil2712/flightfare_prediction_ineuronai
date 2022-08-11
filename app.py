@@ -100,7 +100,7 @@ def price_calc():
 
         pred2 = round(pred[0])
         print("pred - " ,pred2)
-        return render_template('flight.html', price = pred2 )
+        return render_template('flight.html', price = "pipeline" )
     return render_template("flight.html")    
 
 
